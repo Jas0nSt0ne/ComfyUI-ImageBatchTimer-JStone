@@ -43,6 +43,15 @@
 
 读取节点会先将选定图片载入内存；处理大量或高分辨率图片时，可通过 `image_limit` 和 `start_index` 分批执行。
 
+## 示例工作流
+
+仓库的 `example_workflows/` 目录提供两个可直接拖入 ComfyUI 的模板：
+
+- `Florence2_folder_batch_timer.json`：文件夹图片 → Florence-2 批量描述与计时。
+- `Qwen35_folder_batch_timer.json`：文件夹图片 → Qwen3.5 批量反推与计时。
+
+安装节点并重启 ComfyUI 后，也可以从 `Workflow → Browse Templates` 的自定义节点分类中找到这些模板。模板中的图片目录是占位值，运行前需要改成自己的目录；模型和外部节点依赖仍需按“安装与依赖”一节准备。
+
 ## 日志与计时
 
 每次运行生成一个 UTF-8 JSONL 文件，默认位置为 ComfyUI 输出目录下的：
